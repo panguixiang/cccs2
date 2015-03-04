@@ -1,0 +1,98 @@
+	
+		.tabs_title {
+			margin: 0;	
+			line-height:56px;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight:bold;
+			overflow:hidden;
+			width:208px;
+		}
+
+		div#feature_list {
+			width: 600px;
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+			background-color:#FFF;
+		}
+
+		div#feature_list ul {
+			position: absolute;
+			top: 0;
+			list-style: none;	
+			padding: 0;
+			margin: 0;
+		}
+
+		ul#tabs {
+			right: 0;
+			z-index: 2;
+			width: 208px;
+		}
+
+		ul#tabs li {
+			font-size: 12px;
+			font-family: Arial;
+		}
+		
+		ul#tabs li img {
+			padding: 5px;
+			border: none;
+			float: left;
+			margin: 10px 10px 0 0;
+		}
+
+		ul#tabs li a {
+			color: #999;
+			text-decoration: none;	
+			display: block;
+			padding-left: 22px;
+			margin:3px 0;
+			height: 56px;
+			outline: none;
+			background:  url('../images/feature-tab.gif') right top no-repeat;
+		}
+
+
+
+		ul#tabs li a.current {
+			background:  url('../images/feature-tab-current.gif');
+			color: #FFF;
+		}
+
+		ul#tabs li a.current:hover {
+			text-decoration: none;
+			cursor: default;
+		}
+
+		ul#output {
+			left: 0;
+			width: 600px;
+			height: 300px;
+			position: relative;
+		}
+
+		ul#output li {
+			position: absolute;
+			width: 600px;
+			height: 300px;
+		}
+
+		ul#output li a {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			padding: 8px 12px;
+			text-decoration: none;
+			font-size: 11px;
+			color: #FFF;
+			background: #000;
+			-moz-border-radius: 5px;
+		}
+		
+		ul#output li a:hover {
+			background: #D33431;
+		}
+
+

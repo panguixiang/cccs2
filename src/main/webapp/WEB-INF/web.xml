@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- Spring 服务层的配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+    <listener>
+    <description>监听session超时时修改用户登录时长</description>
+	<listener-class>com.dsg.cccs.listener.UserSessionListener</listener-class>
+	</listener>
+	
+	<listener>  
+      <description>定时销毁修改头像临时文件夹及文件</description>
+       <listener-class>com.dsg.cccs.listener.TimerDeleteFileListener</listener-class>  
+    </listener> 
+	
+<!-- begin 发送邮件配置-->
+   <context-param>
+     <param-name>smtpHost</param-name>
+     <param-value>smtp.ym.163.com</param-value>
+   </context-param>
+   <context-param>
+     <param-name>smtpPort</param-name>
+     <param-value>25</param-value>
+   </context-param>
+   <context-param>
+     <param-name>emailUserName</param-name>
+     <param-value>email@chinacartooncs.com</param-value>
+   </context-param>
+    <context-param>
+     <param-name>emailUserPaswd</param-name>
+     <param-value>cartoon</param-value>
+   </context-param>
+	<!-- end 发送邮件配置-->
+
+
+		
+	<!-- Spring MVC 字符编码过滤器 -->
+   <filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/manage</url-pattern>
+	</filter-mapping>
+   <filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/account</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/app_article</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/application</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/article</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/cartoon</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/copyright</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/info</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/mycenter</url-pattern>
+	</filter-mapping>
+
+
+<!-- editor编辑器 上传附件中文乱码过滤器 -->
+<filter>
+			<filter-name>unicodeFilter</filter-name>
+			<filter-class>com.dsg.cccs.utils.UnicodeFilter</filter-class>
+			<init-param>
+				<param-name>encoding</param-name>
+				<param-value>GBK</param-value>
+			</init-param>
+		</filter>
+		<filter-mapping>
+			<filter-name>unicodeFilter</filter-name>
+			<url-pattern>/xheditor/upload</url-pattern>
+		</filter-mapping>
+	
+
+	<!-- Handles all requests into the application -->
+	<servlet>
+		<servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>XhEditor</servlet-name>
+		<servlet-class>com.dsg.cccs.utils.UploadFileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>XhEditor</servlet-name>
+		<url-pattern>/xheditor/upload</url-pattern>
+	</servlet-mapping>
+
+		<!-- 错误页面定义 -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/error403.jsp</location>
+    </error-page>
+</web-app>

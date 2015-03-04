@@ -1,0 +1,146 @@
+alter table applyknow add last_time datetime;
+alter table r43_4 add isAgent varchar(10);
+alter table r41 add isAgent varchar(10);
+
+ALTER TABLE copyright_person MODIFY hasLetter VARCHAR(100);
+
+#新增z51表
+
+DROP TABLE IF EXISTS `z51`;
+
+CREATE TABLE `z51` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `flow_num` varchar(60) DEFAULT NULL,
+  `opusName` varchar(200) DEFAULT NULL,
+  `opusType_` varchar(200) DEFAULT NULL,
+  `completedDate` varchar(14) DEFAULT NULL,
+  `appearDate` varchar(14) DEFAULT NULL,
+  `isImpower` varchar(10) DEFAULT NULL,
+  `impowerDesc` varchar(400) DEFAULT NULL,
+  `zzqRegNumber` varchar(26) DEFAULT NULL,
+  `isAppraise` varchar(10) DEFAULT NULL,
+  `isAppraiseNum` varchar(20) DEFAULT NULL,
+  `isAppraiseName` varchar(200) DEFAULT NULL,
+  `contractNum` varchar(100) DEFAULT NULL,
+  `creditorAmount` varchar(100) DEFAULT NULL,
+  `debtDateInfo` varchar(150) DEFAULT NULL,
+  `copyrightType` varchar(100) DEFAULT NULL,
+  `copyrightScope` varchar(100) DEFAULT NULL,
+  `impawnSum` varchar(50) DEFAULT NULL,
+  `assureScope` varchar(800) DEFAULT NULL,
+  `bailDateInfo` varchar(150) DEFAULT NULL,
+  `applyType` varchar(20) DEFAULT NULL,
+  `isAgent` varchar(10) DEFAULT NULL,
+  `agentDesc` varchar(180) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+
+
+
+#将account表中字段除了主键外其它的全部可空
+alter table account add address varchar(200);
+alter table account add postcode varchar(200);
+alter table account add phone varchar(200);
+alter table account add peremail varchar(200);
+alter table account add mobile varchar(200);
+alter table account add fax varchar(200);
+alter table account add portraitimg varchar(200);
+
+alter table account add long_time varchar(200);
+alter table account add login_number int(10);
+alter table account add last_login_time datetime;
+
+
+
+
+#资源中心基本资料 
+ALTER table account add center_update int(5);
+ALTER table account add center_type varchar(50);
+ALTER table account add country varchar(200);
+ALTER table account add card_number varchar(100);
+
+
+#2012 09 04
+ALTER TABLE r21 MODIFY validStartDate VARCHAR(200);
+ALTER TABLE r21 MODIFY validEndDate VARCHAR(200);
+
+
+
+
+#2012 09 11
+#新增friends表
+#Table structure for table `friends`
+DROP TABLE IF EXISTS `friends`;
+CREATE TABLE `friends` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `url` varchar(200) DEFAULT NULL,
+  `image` varchar(200) DEFAULT NULL,
+  `create_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+
+/*Data for the table `friends` */
+#新增stationmail表
+/*Table structure for table `stationmail` */
+DROP TABLE IF EXISTS `stationmail`;
+CREATE TABLE `stationmail` (
+  `id` varchar(40) NOT NULL,
+  `addresser` varchar(60) DEFAULT NULL,
+  `recipients` varchar(60) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `context` varchar(1000) DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+#0915资源中心的表修改
+ALTER TABLE `cartoon` DROP `letter`;
+ALTER TABLE `cartoon` DROP `content`;
+ALTER TABLE  `cartoon` CHANGE  `cp`  `cp` INT( 11 ) NULL DEFAULT  '1';
+ALTER TABLE  `cartoon` ADD  `zhengshu_path` VARCHAR( 255 ) NULL DEFAULT  '' AFTER  `cover`;
+ALTER TABLE  `cartoon` ADD  `xiangqin_path` VARCHAR( 255 ) NULL DEFAULT  '' AFTER  `cover`;
+ALTER TABLE  `cartoon` ADD  `jianjie` TEXT NULL DEFAULT  '' AFTER  `cover`;
+ALTER TABLE  `cartoon` ADD  `zuopin_path` VARCHAR( 255 ) NULL DEFAULT  '' AFTER  `cover`;
+ALTER TABLE  `cartoon` CHANGE  `cover`  `cover_path` VARCHAR( 255 ) NULL DEFAULT  '';
+ALTER TABLE  `cartoon` ADD  `state` TINYINT NULL DEFAULT  '1' AFTER  `zhengshu_path`;
+ALTER TABLE  `cartoon` ADD  `user_id` BIGINT NULL DEFAULT  '0' AFTER  `zhengshu_path` ;
+ALTER TABLE  `cartoon` ADD  `delete_flag` TINYINT NULL DEFAULT  '1' AFTER  `user_id`;
+ALTER TABLE  `cartoon` ADD  `length` VARCHAR( 255 ) NULL DEFAULT  '' AFTER  `type`;
+
+#新增作品编号
+ALTER table info add opusnumber varchar(100);
+#用户关联角色id
+ALTER table manager add roleid varchar(60) DEFAULT '';
+#创建用户时间
+ALTER table manager add create_time datetime;
+#用户级别 1为超级2为二级
+ALTER TABLE manager ADD level INT(5) DEFAULT 2;
+
+#新建权限表
+/*Table structure for table `role` */
+
+DROP TABLE IF EXISTS `role`;
+
+CREATE TABLE `role` (
+  `id` varchar(60) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `resourceid` varchar(3000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `role` */
+
+#2012 09 24
+ALTER TABLE account MODIFY long_time BIGINT(20);
+
+#2012 10 15
+ALTER table article add pub_date varchar(50); /*发布时间*/
+ALTER table cartoon add common varchar(200); /*资源中心审核意见*/
+ALTER TABLE application  MODIFY COLUMN  area INT(5) DEFAULT 0;/*表单区域*/
+#2012 11 6
+ALTER table application add isupdate varchar(10) DEFAULT 'yes'; /*是否可以修改表单*/
+#2012 11 21
+ALTER table article add pvnum bigint(20) DEFAULT 0; /*新闻访问量统计*/

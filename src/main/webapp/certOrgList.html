@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>请选择出版单位</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>请选择认证机构</TITLE>
+
+<STYLE type=text/css>.unit {
+	
+}
+.unit DIV {
+	BORDER-BOTTOM: #cccccc 0px dotted; BORDER-LEFT: #cccccc 0px dotted; WIDTH: 242px; FONT-SIZE: 12px; BORDER-TOP: #cccccc 0px dotted; BORDER-RIGHT: #cccccc 0px dotted
+}
+.title {
+	MARGIN-TOP: 10px; COLOR: #6666ff; CLEAR: both; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.buttom {
+	POSITION: absolute; TOP: 10px; LEFT: 540px
+}
+</STYLE>
+
+<SCRIPT language=javascript defer>
+function returnSelect(){
+	var reVal  = new Array(3);
+	var certOrgName = document.getElementsByName("certOrgName");
+	var linkMan = document.getElementsByName("linkMan");
+	var fax = document.getElementsByName("certFax");
+	var returnStr = "";
+	for(var i=0; i<certOrgName.length; i++){
+		if(certOrgName(i).checked){
+			reVal[0] = certOrgName(i).value;
+			reVal[1] = linkMan(i).value;
+			reVal[2] = fax(i).value;
+		}
+	}
+	window.opener.document.getElementById("certOrg").value=reVal[0];
+	//window.opener.document.getElementById("linkMan").value=reVal[1];
+	//window.opener.document.getElementById("certFax").value=reVal[2];
+	window.close();
+}
+ 
+
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16447"></HEAD>
+<BODY>
+<DIV 
+style="BORDER-BOTTOM: #ff0000 0px solid; BORDER-LEFT: #ff0000 0px solid; OVERFLOW-Y: scroll; WIDTH: 750px; HEIGHT: 100%; OVERFLOW: hidden; BORDER-TOP: #ff0000 0px solid; BORDER-RIGHT: #ff0000 0px solid">
+<DIV 
+style="PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 3px">
+<DIV class=buttom><INPUT onclick=returnSelect(); value=确定 type=button> <INPUT onclick=javascript:window.close(); value=取消 type=button> </DIV><BR><BR>
+<DIV class=unit>
+<FORM id=orgForm method=post name=orgForm>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName 
+value=韩国著作权委员会 CHECKED type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">韩国著作权委员会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_1 onclick="updateCertOrg('1')" name=upd_1 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_1 onclick="deleteCertOrg('1')" name=del_1 value=删除 type=button></SPAN> 
+<INPUT name=certType value=2 type=hidden> <INPUT name=linkMan value=韩济勋 
+type=hidden> <INPUT name=certFax value=65017137 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName 
+value=国际唱片业协会 type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">国际唱片业协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_2 onclick="updateCertOrg('2')" name=upd_2 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_2 onclick="deleteCertOrg('2')" name=del_2 value=删除 type=button></SPAN> 
+<INPUT name=certType value=1 type=hidden> <INPUT name=linkMan value="郭彪  靳文娟" 
+type=hidden> <INPUT name=certFax value=58256221 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName value=日本唱片协会 
+type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">日本唱片协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_3 onclick="updateCertOrg('3')" name=upd_3 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_3 onclick="deleteCertOrg('3')" name=del_3 value=删除 type=button></SPAN> 
+<INPUT name=certType value=1 type=hidden> <INPUT name=linkMan value=朱根全 
+type=hidden> <INPUT name=certFax value=58797350 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName 
+value=台湾著作权保护协会 type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">台湾著作权保护协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_41 onclick="updateCertOrg('41')" name=upd_41 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_41 onclick="deleteCertOrg('41')" name=del_41 value=删除 type=button></SPAN> 
+<INPUT name=certType value=1 type=hidden> <INPUT name=linkMan value=(音)王世賢 
+type=hidden> <INPUT name=certFax value=00886-2-2742-0621 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName value=美国电影协会 
+type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">美国电影协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_61 onclick="updateCertOrg('61')" name=upd_61 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_61 onclick="deleteCertOrg('61')" name=del_61 value=删除 type=button></SPAN> 
+<INPUT name=certType value=2 type=hidden> <INPUT name=linkMan value=彭小姐 
+type=hidden> <INPUT name=certFax value=58693145 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName 
+value=台湾著作权保护协会 type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">台湾著作权保护协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_81 onclick="updateCertOrg('81')" name=upd_81 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_81 onclick="deleteCertOrg('81')" name=del_81 value=删除 type=button></SPAN> 
+<INPUT name=certType value=2 type=hidden> <INPUT name=linkMan value=(像)施育霖 
+type=hidden> <INPUT name=certFax value=886-2-2518-4443 type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName value=香港影业协会 
+type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">香港影业协会<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_101 onclick="updateCertOrg('101')" name=upd_101 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_101 onclick="deleteCertOrg('101')" name=del_101 value=删除 type=button></SPAN> 
+<INPUT name=certType value=2 type=hidden> <INPUT name=linkMan value=钟伟雄 
+type=hidden> <INPUT name=certFax value="+852 2311-1178" type=hidden> </DIV>
+<DIV style="FLOAT: left; PADDING-TOP: 10px"><INPUT name=certOrgName 
+value="Independent Film &amp; Televison Alliance" type=radio><SPAN 
+style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid">Independent 
+Film &amp; Televison Alliance<INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -22px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 150px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=upd_102 onclick="updateCertOrg('102')" name=upd_102 value=修改 type=button><INPUT style="BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; MARGIN-TOP: -18px; DISPLAY: none; COLOR: gray; MARGIN-LEFT: 190px; BORDER-TOP: black 0px solid; BORDER-RIGHT: black 0px solid" id=del_102 onclick="deleteCertOrg('102')" name=del_102 value=删除 type=button></SPAN> 
+<INPUT name=certType value=2 type=hidden> <INPUT name=linkMan 
+value="Nicole Bronstein " type=hidden> <INPUT name=certFax 
+value="1-310-446-1600 " type=hidden> 
+</DIV>
+</FORM></DIV></DIV></DIV><BR></BODY></HTML>

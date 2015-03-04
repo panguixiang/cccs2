@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+/*========common==========*/
+body {font-family:\5B8B\4F53, Arial Narrow, arial, serif;background:#ffffff;font-size:12px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,p, pre, form, fieldset, input, textarea, blockquote {padding:0;margin:0;}
+table, td, tr, th {font-size:12px;}
+li {list-style-type:none;}
+table {margin:0 auto;}
+img {vertical-align:top;border:0;}
+ol, ul {list-style:none;}
+caption, th {text-align:left;}
+h1, h2, h3, h4, h5, h6 {font-size:12px;font-weight:normal;}
+q:before, q:after {content:'';}
+address, caption, cite, code, dfn, em, th, var {font-weight:normal;font-style:normal;}
+a{ color:#000;text-decoration:none;}
+a:hover{ text-decoration:underline;}
+.m_b5{ margin-bottom:5px;}
+.m_b10{ margin-bottom:10px;}
+.p_10{ padding:10px;}
+.clear{ clear:both;}
+.a_b{ color:#5C6C70;}
+.a_blue{ color:#1193D0;}
+.a_y{ color:#F2F957;}
+.a_red{ color:red;}
+
+
+
+.table_content{width:720px; margin:0 auto;}
+.table_title{ line-height:35px; padding:10px; text-align:center; font-size:14px; font-weight:bold;}
+.table_title img{ display:inline-block; padding-top:5px;*padding-top:0; *vertical-align:middle;margin-left:15px;}
+.app_table table{border-collapse:collapse; background:#e3f4ff;}
+.app_table td{line-height:20px; padding:5px 8px;}
+.app_table td.td_blue{ background-color:#BCE0F7;}
+.m_button{ width:92px; height:35px; line-height:35px; font-size:14px; font-weight:bold; background:url(../images/button_bg.gif) no-repeat; border:none; color:#FFF; cursor:pointer;}
+.app_table input{ vertical-align:middle; margin-right:5px;}
+
+.YL_table table{border-collapse:collapse; border-color:#333333;	font-size:14px;margin-top:20px;}
+.YL_table td{line-height:25px; border-color:#333333;vertical-align:middle;	word-break:break-all;overflow:auto;}
+.YL_table th{height:30px; border-color:#333333; font-weight:normal;font-size:14px; text-align:center; vertical-align:middle;}
+.YL_table ._span{width:200px;margin-bottom:2px;border-bottom:1px solid black;}
+.YL_table .yl_t{ line-height:30px; font-size:16px; font-weight:bold; padding-top:20px; font-family:黑体; text-align:center; border-top:2ps solid #000}
+.border_b{ border-bottom:1px solid #000;width:200px;}
+.YL_table td.FenLeiInfo{ width:20px;background-color:#CCCCCC;text-align:center;  line-height:16px;}
+.p_5px td{ padding:0 5px;}
+.p_5px th{padding:0 5px;}
+.YL_table p{ margin:10px 0;}
+.zhuzquanren{height:40px; line-height:50px; font:12px;text-align:center;}
+.address{height:40px; line-height:50px; font:12px; padding-left:30px;text-align:left;}
+.zzqtitle{height:25px; line-height:25px; font:14px; text-align:center;font-size:14px; font-family:黑体;}
+
+.text_r{ text-align:right;}
+

@@ -1,0 +1,315 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/form/formStyle2.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function returnSelect(){
+	
+	var reVal  = new Array(2);
+	var unitCode = document.all("unitCode1");
+	var unitName = document.all("unitCode2");
+	
+	for(var i=0; i<unitCode.length; i++){
+		if(unitCode(i).checked){
+			reVal[0] = unitCode(i).value;
+		}
+	}
+	for(var i=0; i<unitName.length; i++){
+		if(unitName(i).checked) {
+		  reVal[1] = unitName(i).value;
+		}
+	}
+	var returnStr = reVal[0]+"-"+reVal[1];
+	window.opener.document.getElementById("softNumberid").value=returnStr;
+	window.close();
+}
+</script>
+</head>
+
+<body>
+<div class="list_soft">
+	<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td>
+    	<table width="100%" border="0" cellspacing="0" class="soft_sm">
+  <tr>
+    <td width="75%" style="color:#C00; font-weight:bold;">使用说明：</td>
+    <td width="15%"><input type="button" name="button" id="buttond" value="确认选择并提交" onclick="returnSelect();" /></td>
+    <td width="10%"><input type="button" name="button" id="buttons" value="关闭" onclick="javascript:window.close();" /></td>
+  </tr>
+  <tr>
+    <td>1）、先选择“1、计算机软件分类代码表”中的任一项。</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>2）、再选择“2、计算机软件适用的国民经济行业代码表”中的任一项</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>3）、最后点击“确认选择提交”按钮提交。</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <table width="100%" border="0" cellspacing="0" class="soft_t_t2">
+  <tr>
+    <td colspan="4" class="soft_t_b">1、计算机软件分类代码表</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="font-weight:bold">
+    <input type="radio" name="unitCode1" id="radio1" value="10000" CHECKED/>10000基础软件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td width="25%"><input type="radio" name="unitCode1" id="radio1" value="10100" />10100操作系统</td>
+    <td width="25%"><input type="radio" name="unitCode1" id="radio1" value="10101" />10101通用操作系统</td>
+    <td width="25%"><input type="radio" name="unitCode1" id="radio1" value="10102" />10102嵌入式操作系统</td>
+    <td width="25%"><input type="radio" name="unitCode1" id="radio1" value="14000" />14000其他操作系</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode1" id="radio1" value="10200" />10200数据库系统</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="10300" />10300支撑软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="10400" />10400嵌入式系统软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="10900" />10900其他</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="font-weight:bold; padding-top:10px;">
+      <input type="radio" name="unitCode1" id="radio1" value="20000" />
+      20000中间件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode1" id="radio1" value="20100" />20100基础中间件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="20200" />20200业务中间件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="20300" />20300领域中间件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="20900" />20900其他中间件</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="font-weight:bold; padding-top:10px;">
+    <input type="radio" name="unitCode1" id="radio1" value="30000" />30000应用软件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode1" id="radio1" value="30100" />30100通用软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30101" />30101字处理软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30102" />30102报表处理软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30103" />30103地理信息软件</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30104" />30104网络软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30105" />30105游戏软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30106" />30106企业管理软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30107" />30107多媒体应用软件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode1" id="radio1" value="30108" />30108辅助设计与辅助制造<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;（CAD/CAM软件）</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30109" />30109信息安全软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30900" />30900其它通用软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30200" />30200行业应用软件</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30201" />30201政务软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30202" />30202商务（贸）软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30203" />30203财税软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30204" />30204金融软件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode1" id="radio1" value="30205" />30205商业软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30206" />30206通信软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30207" />30207能源软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30208" />30208工业控制</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30209" />30209教育软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30210" />30210旅游服务业</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30211" />30211交通应用</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30212" />30212会计核算软件/财务管理<br>&nbsp;&nbsp;&nbsp;&nbsp;软件</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode1" id="radio1" value="30219" />30219其它行业应用软件</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30300" />30300文字语言处理</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30301" />30301信息检索</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30302" />30302文本处理</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30304" />30304其它资源库</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30305" />30305机器翻译</td>
+    <td><input type="radio" name="unitCode1" id="radio1" value="30309" />30309其它文字处理软件</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" style="font-weight:bold; padding-top:10px;">
+      <input type="radio" name="unitCode1" id="radio1" value="40000" />40000应用软件</td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    <table width="100%" border="0" cellspacing="0" class="soft_t_t2">
+  <tr>
+    <td colspan="4" class="soft_t_b">2、计算机软件适用的国民经济行业代码表</td>
+  </tr>
+  <tr class="soft_gray">
+    <td colspan="4"><input type="radio" name="unitCode2" id="radio" value=" " CHECKED/>
+      （依据1992-004号计算机软件登记公告的规定，若因软件适用的国民经济行业范围广无法对应某一行业时，可选择该项）</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0100" />0100农业 </td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0200" />0200林业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0300" />0300畜牧业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0400" />0400渔业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="0500" />0500农、林、牧、渔服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0600" />0600煤炭开采和洗选业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0700" />0700石油和天然气开采业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0800" />0800黑金属矿采选业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="0900" />0900有色金属矿采选业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1000" />1000非金属矿采选业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1100" />1100其他采矿业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1300" />1300农副食品加工业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="1400" />1400食品制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1500" />1500饮料制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1600" />1600烟草制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1700" />1700纺织业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1800" />1800纺织服装、鞋、帽制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="1900" />1900皮革、毛皮、羽毛（绒）<br>&nbsp;&nbsp;&nbsp;&nbsp;及其制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2000" />2000木材加工及木、竹、藤、<br>&nbsp;&nbsp;&nbsp;&nbsp;棕、草制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2100" />2100家具制造业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="2200" />2200造纸及纸制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2300" />2300印刷业和记录媒介的复制</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2400" />2400文教体育用品制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2500" />2500石油加工、炼焦及核燃料加<br>&nbsp;&nbsp;&nbsp;&nbsp;工业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2600" />2600化学原料及化学制品制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2700" />2700医药制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2800" />2800化学纤维制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="2900" />2900橡胶制造业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="3000" />3000塑料制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3100" />3100非金属矿物制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3200" />3200黑色金属冶炼及压延加工业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3300" />3300有色金属冶炼及压延加工业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3400" />3400金属制品业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3500" />3500通用设备制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3600" />3600专业设备制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="3700" />3700交通运输设备制造业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="3900" />3900电气机械及器材制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4000" />4000通信设备、计算机及其他<br>&nbsp;&nbsp;&nbsp;&nbsp;电子设备制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4100" />4100仪器仪表及文化、办公用<br>&nbsp;&nbsp;&nbsp;&nbsp;机械制造业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4200" />4200工艺品及其他制造业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4300" />4300废弃资源和废旧材料回收<br>&nbsp;&nbsp;&nbsp;&nbsp;加工业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4400" />4400电力、热力的生产和供应业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4500" />4500燃气生产和供应业</td>
+    <td><input type="radio" name="unitCode2" id="radio4" value="4600" />4600水的生产和供应业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="4700" />4700房屋和土木工程建筑业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4800" />4800建筑安装业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="4900" />4900建筑装饰业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5000" />5000其他建筑业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5100" />5100铁路运输业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5200" />5200道路运输业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5300" />5300城市公共交通业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5400" />5400水上运输业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="5500" />5500航空运输业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5600" />5600管道运输业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5700" />5700装卸搬运和其他运输服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5800" />5800仓储业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="5900" />5900邮政业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6000" />6000电信和其他信息传输服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6100" />6100计算机服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio4" value="6200" />6200软件业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="6300" />6300批发业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6500" />6500零售业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6600" />6600住宿业</td>
+    <td><input type="radio" name="unitCode2" id="radio4" value="6700" />6700餐饮业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6800" />6800银行业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="6900" />6900证券业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7000" />7000保险业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7100" />7100其他金融活动</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="7200" />7200房地产业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7300" />7300租凭业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7400" />7400商务服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7500" />7500研究与试验发展</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7600" />7600专业技术服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7700" />7700科技交流和推广服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7800" />7800地质勘查业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="7900" />7900水利管理业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="8000" />8000环境管理业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8100" />8100公共设施管理业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8200" />8200居民服务业</td>
+    <td><input type="radio" name="unitCode2" id="radio4" value="8300" />8300其他服务业</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8400" />8400教育</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8500" />8500卫生</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8600" />8600社会保障业</td>
+    <td><input type="radio" name="unitCode2" id="radio4" value="8700" />8700社会福利业</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="8800" />8800新闻出版业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="8900" />8900广播、电视、电影和影像业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9000" />9000文化艺术业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9100" />9100体育</td>
+  </tr>
+  <tr>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9200" />9200娱乐业</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9300" />9300中国共产党机关</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9400" />9400国家机构</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9500" />9500人民政协和民主党派</td>
+  </tr>
+  <tr class="soft_gray">
+    <td><input type="radio" name="unitCode2" id="radio2" value="9600" />9600群众团体、社会团体和宗<br>&nbsp;&nbsp;&nbsp;&nbsp;教组织</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9700" />9700基层群众自治组织</td>
+    <td><input type="radio" name="unitCode2" id="radio2" value="9800" />9800国际组织</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    </td>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>

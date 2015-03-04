@@ -1,0 +1,48 @@
+BODY {
+	TEXT-ALIGN: center; MARGIN: 0px
+}
+#SoftRegSLZYD {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 13px; PADDING-TOP: 0px
+}
+#SoftRegSLZYD TABLE { border:1px solid #000; BORDER-COLLAPSE: collapse; background:#e3f4ff;}
+#SoftRegSLZYD .contentbg {
+	BACKGROUND-COLOR: #e3f4ff
+}
+#SoftRegSLZYD .resultbg {
+	BACKGROUND-COLOR: #f2faff
+}
+#SoftRegSLZYD TD {
+	BORDER-BOTTOM: #333333 1px solid; BORDER-LEFT: #333333 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 18px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 30px; FONT-SIZE: 13px; BORDER-TOP: #333333 1px solid; BORDER-RIGHT: #333333 1px solid; PADDING-TOP: 2px
+}
+#SoftRegSLZYD .titleLable {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #bfdeff
+}
+#SoftRegSLZYD .noRightBord {
+	BORDER-RIGHT: 0px
+}
+#SoftRegSLZYD .small_title {
+	BACKGROUND-COLOR: #bfdeff; FONT-WEIGHT: bold
+}
+.right_result {
+	COLOR: #339900; FONT-WEIGHT: bold
+}
+.error_result {
+	COLOR: #ff0000; FONT-WEIGHT: bold
+}
+#bustableitemdivid TABLE {
+	BACKGROUND-COLOR: #ffffcc; BORDER-COLLAPSE: collapse
+}
+#bustableitemdivid TD {
+	BORDER-BOTTOM: #555555 1px solid; TEXT-ALIGN: left; BORDER-LEFT: #555555 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 22px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; HEIGHT: 22px; FONT-SIZE: 13px; VERTICAL-ALIGN: middle; BORDER-TOP: #555555 1px solid; BORDER-RIGHT: #555555 1px solid; PADDING-TOP: 3px
+}
+.input_class {
+	WIDTH: 85%
+}
+.divErrorRed {
+	COLOR: #cc0000
+}
+#mytips {
+	BORDER-BOTTOM: orange 1px solid; POSITION: absolute; TEXT-ALIGN: left; FILTER: progid:DXImageTransform.Microsoft.Shadow(color=#999999,direction=135,strength=3); BORDER-LEFT: orange 1px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 18px; BACKGROUND-COLOR: #ffffe6; PADDING-LEFT: 6px; WIDTH: 600px; PADDING-RIGHT: 6px; DISPLAY: none; HEIGHT: 16px; COLOR: black; FONT-SIZE: 12px; BORDER-TOP: orange 1px solid; BORDER-RIGHT: orange 1px solid; PADDING-TOP: 6px; TOP: 5px; LEFT: 0px
+}
+
+#SoftRegSLZYD .td_blue{ background:#bfdeff;}
